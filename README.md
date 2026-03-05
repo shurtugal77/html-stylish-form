@@ -1,6 +1,6 @@
 # Stylish Form
 Today we're building a lovely form for customer enquiries. Forms are not the easiest elements to style, so you might want to take your time to get it right! The end result should look as close as possible to the below:
-
+v
 ![Final](images/result.png)
 
 ## Instructions
