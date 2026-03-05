@@ -7,37 +7,63 @@
     <link rel="stylesheet" href="signin-form.css">
 </head>
 <body>
-    
-    <div class="input-container">
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username" placeholder="Please enter an UwU username">
-    </div>
-    
-    <div class="input-container">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" placeholder="Please enter a secure password">
-    </div>
-    
-    <div class="input-container">
-        <label for="password_confirm">Confirm Password</label>
-        <input type="password" name="password-confirm" id="password_confirm" placeholder="Confirm password">
-    </div>
-    
-    <div class="input-container">
+    <form>
+        <h1>Signin Form</h1>
+
+        <div class="input-container">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" placeholder="Please enter an UwU username">
+        </div>
         
-    </div>
-    
-    <div class="input-container">
+        <div class="input-container">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Please enter a secure password">
+        </div>
         
-    </div>
-    
-    <div class="input-container">
+        <div class="input-container">
+            <label for="password_confirm">Confirm Password</label>
+            <input type="password" name="password-confirm" id="password_confirm" placeholder="Confirm password">
+        </div>
         
-    </div>
-    
-    <div class="input-container">
+        <div class="input-container">
+            <label for="city-select">Select a city</label>
+            <select name="city-selection" id="city-select" multiple>
+                <option value="London">London</option>
+                <option value="Paris">Paris</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="NewYork">New York</option>
+            </select>
+        </div>
         
-    </div>
+        <div class="input-container">
+            <p>Select the number of traveling children</p>
+            <label>0
+                <input type="radio" name="children-select" value="0">
+            </label>
+            <label>1
+                <input type="radio" name="children-select" value="1">
+            </label>
+            <label>2
+                <input type="radio" name="children-select" value="2">
+            </label>
+            <label>3+
+                <input type="radio" name="children-select" value="3+">
+            </label>
+            
+        </div>
+        
+        <div class="input-container">
+            <label>Accept Terms and conditions:
+                <input type="checkbox" name="terms-and-conditions" value="accepted">
+            </label>
+        </div>
+        
+        <div class="input-container">
+            <label>Send form:
+                <input type="submit" value="Sign-Up">
+            </label>
+        </div>
+    </form>
 
 </body>
 </html>
