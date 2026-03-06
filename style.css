@@ -7,10 +7,27 @@
 
 body {
     min-height: 100vh;
+
+    background-color: lightcoral;
+}
+
+main {
+    
 }
 
 form {
     display: grid;
+    align-items: center;
+    gap: 30px;
+
+    background-color: white;
+    border-radius: 10px;
+
+    margin: 50px 20%;
+}
+
+h1 {
+    justify-self: center;
 }
 
 .input-container {
