@@ -3,6 +3,23 @@
     font-weight: 400;
 }
 
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    background:
+        linear-gradient(
+            to top right,
+            lightblue,
+            lightseagreen,
+            rebeccapurple
+    );
+}
+
 h1 {
     text-transform: capitalize;
     text-align: center;
@@ -22,4 +39,12 @@ form {
     background-color: lightgray;
     border: solid 2px darkcyan;
     box-shadow: 0 8px 6px -6px rgba(0, 139, 139, 0.527);
+}
+
+input:invalid {
+    background-color: red;
+}
+
+input:valid {
+    background-color: lightcyan;
 }
