@@ -4,27 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic Form</title>
+    <!-- <link rel="stylesheet" href="signin-form.css"> -->
 </head>
 <body>
     <h2>Basic Form</h2>
-    <form class="grid">
+    <form action="submit.html">
 
         <!-- Nesting labels -->
         <div class="input-container">
             <label>Username
-            <input type="text" placeholder="Enter a unique username" name="username">
+            <input type="text" placeholder="Enter a unique username" name="username" required>
             </label>
         </div>
 
         <div class="input-container">
             <!-- Using the label "for" attribute -->
             <label for="pw">Password</label>
-            <input id="pw" type="password" placeholder="Enter a secure password" name="password">
+            <input id="pw" type="password" placeholder="Enter a secure password" name="password" required>
+        </div>
+
+        <div class="input-container">
+            <label >Email
+            <input type="email">
+            </label>
         </div>
 
         <div class="input-container">
             <label>What is your age?
-                <input type="number">
+                <input type="number" name="age" required min="10" max="100">
             </label>
         </div>
 
@@ -37,6 +44,12 @@
         <div class="input-container">
             <label>Date
             <input type="date">
+            </label>
+        </div>
+
+        <div class="input-container">
+            <label>Bio
+                <textarea name="biography" cols="50" rows="5" minlength="10" maxlength="200"></textarea>
             </label>
         </div>
 
@@ -78,7 +91,22 @@
         <br>
         <br>
 
+
         <strong>Dropdown Selection</strong>
+        <div class="input-container">
+            <select name="airport" id="">
+                <option>London</option>
+                <option>Paris</option>
+                <option>Berlin</option>
+                <option>Regensburg</option>
+            </select>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <strong>Dropdown Selection with custom value</strong>
         <div class="input-container">
             <select name="airport" id="">
                 <option value="GTW">London Gatwick</option>
@@ -88,13 +116,14 @@
             </select>
         </div>
 
-        <div class="input-container">
-        </div>
+        <br>
+        <br>
+        <br>
 
         <div class="input-container">
-        </div>
-
-        <div class="input-container">
+            <label>Diabled Input
+                <input type="text" name="" id="" disabled>
+            </label>
         </div>
 
         <div class="input-container">
@@ -104,6 +133,7 @@
         <br>
         <br>
 
+        <!-- Submit Input -->
         <input type="submit" value="Click to submit">
 
         <button type="reset">

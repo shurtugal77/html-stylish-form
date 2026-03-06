@@ -7,22 +7,22 @@
     <link rel="stylesheet" href="signin-form.css">
 </head>
 <body>
-    <form method="post" action="submit.html">
+    <form action="submit.html">
         <h1>Signin Form</h1>
 
         <div class="input-container">
             <label for="username">Username</label>
-            <input type="text" name="username" id="username" placeholder="Please enter an UwU username">
+            <input type="text" name="username" id="username" placeholder="Please enter an UwU username" required>
         </div>
         
         <div class="input-container">
             <label for="password">Password</label>
-            <input type="password" name="password" id="password" placeholder="Please enter a secure password">
+            <input type="password" name="password" id="password" placeholder="Please enter a secure password" required minlength="2">
         </div>
         
         <div class="input-container">
             <label for="password_confirm">Confirm Password</label>
-            <input type="password" name="password-confirm" id="password_confirm" placeholder="Confirm password">
+            <input type="password" name="password-confirm" id="password_confirm" placeholder="Confirm password" disabled>
         </div>
         
         <div class="input-container">
@@ -54,7 +54,13 @@
         
         <div class="input-container">
             <label>Accept Terms and conditions:
-                <input type="checkbox" name="terms-and-conditions" value="accepted">
+                <input type="checkbox" name="terms-and-conditions" value="accepted" required>
+            </label>
+        </div>
+
+        <div class="input-container">
+            <label>Tell us about your experience on our website:
+                <textarea name="your-experience" id="" cols="30" rows="10"></textarea>
             </label>
         </div>
         
@@ -62,6 +68,8 @@
             <label>Send form:
                 <input type="submit" value="Sign-Up">
             </label>
+
+            <button type="reset">Reset Form</button>
         </div>
     </form>
 
