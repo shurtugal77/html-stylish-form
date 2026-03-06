@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Form</title>
+</head>
+<body>
+    <h2>Basic Form</h2>
+    <form class="grid">
+
+        <!-- Nesting labels -->
+        <div class="input-container">
+            <label>Username
+            <input type="text" placeholder="Enter a unique username" name="username">
+            </label>
+        </div>
+
+        <div class="input-container">
+            <!-- Using the label "for" attribute -->
+            <label for="pw">Password</label>
+            <input id="pw" type="password" placeholder="Enter a secure password" name="password">
+        </div>
+
+        <div class="input-container">
+            <label>What is your age?
+                <input type="number">
+            </label>
+        </div>
+
+        <div class="input-container">
+            <label>Color
+            <input type="color">
+        </label>
+        </div>
+
+        <div class="input-container">
+            <label>Date
+            <input type="date">
+            </label>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <strong>Radio Groups/Buttons</strong>
+        <div class="input-container">
+            <label>0-18
+                <input type="radio" name="age-group" value="0-18">
+            </label>
+            <label>19-59
+                <input type="radio" name="age-group" value="19-59">
+            </label>
+            <label>60+
+                <input type="radio" name="age-group" value="60+">
+            </label>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <strong>Checkboxes</strong>
+        <div class="input-container">
+            <label>Saufen
+                <input type="checkbox" name="hobbies" value="saufen">
+            </label>
+            <label>Programmieren
+                <input type="checkbox" name="hobbies" value="programmieren">
+            </label>
+            <label>Dumme Fragen stellen
+                <input type="checkbox" name="hobbies" value="dumme fragen stellen">
+            </label>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+
+        <strong>Dropdown Selection</strong>
+        <div class="input-container">
+            <select name="airport" id="">
+                <option value="GTW">London Gatwick</option>
+                <option value="LCY">London City</option>
+                <option value="LHR">London Heathrow</option>
+                <option value="STN">London Stansted</option>
+            </select>
+        </div>
+
+        <div class="input-container">
+        </div>
+
+        <div class="input-container">
+        </div>
+
+        <div class="input-container">
+        </div>
+
+        <div class="input-container">
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <input type="submit" value="Click to submit">
+
+        <button type="reset">
+            Reset
+        </button>
+    </form>
+</body>
+</html>
