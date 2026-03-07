@@ -1,3 +1,7 @@
+:root{
+    --input-border: #D6D6D6;
+}
+
 /* Modern Reset */
 * {
     margin: 0;
@@ -9,6 +13,10 @@ body {
     min-height: 100vh;
 
     background-color: lightcoral;
+}
+
+h1 {
+    justify-self: center;
 }
 
 main {
@@ -28,21 +36,18 @@ form {
     
 }
 
-h1 {
-    justify-self: center;
-}
-
 .input-container {
     display: grid;
     grid-template-rows: 1fr 1fr;
     padding: 20px 0;
 
     /* Lines between input fields */
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid var(--input-border);
 }
 
 
 /* Remove the lines of the last input container */
 .input-container:last-of-type {
     border-bottom: none;
+    grid-template-rows: 1fr;
 }
