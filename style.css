@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root{
     --input-border: #D6D6D6;
+    /* custom font */
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* Modern Reset */
@@ -29,25 +36,37 @@ main {
 form {
     display: grid;
     align-items: center;
-    /* gap: 2px; */
-
     margin: 0 10%;
-    
-    
 }
 
 .input-container {
     display: grid;
     grid-template-rows: 1fr 1fr;
+    gap: 10px;
     padding: 20px 0;
 
     /* Lines between input fields */
     border-bottom: 1px solid var(--input-border);
 }
 
+/* TODO: Bessere Lösung für die Trennstriche wäre wenn zwei DIVs aufeinander folgen, dass NUR DANN ein "border-top" erscheint */
 
 /* Remove the lines of the last input container */
 .input-container:last-of-type {
     border-bottom: none;
     grid-template-rows: 1fr;
+}
+
+input, select, textarea {
+    border: none;
+    font-size: larger;
+}
+
+*:is(input, select, textarea):focus {
+    outline: 3px solid var(--input-border);
+}
+
+::picker(select) {
+    outline: none;
+    border: none;
 }
