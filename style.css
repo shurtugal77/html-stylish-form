@@ -12,18 +12,20 @@ body {
 }
 
 main {
-    
+    background-color: white;
+    border-radius: 10px;
+
+    margin: 50px 20%;
 }
 
 form {
     display: grid;
     align-items: center;
-    gap: 30px;
+    /* gap: 2px; */
 
-    background-color: white;
-    border-radius: 10px;
-
-    margin: 50px 20%;
+    margin: 0 10%;
+    
+    
 }
 
 h1 {
@@ -32,4 +34,15 @@ h1 {
 
 .input-container {
     display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px 0;
+
+    /* Lines between input fields */
+    border-bottom: 1px solid red;
+}
+
+
+/* Remove the lines of the last input container */
+.input-container:last-of-type {
+    border-bottom: none;
 }
