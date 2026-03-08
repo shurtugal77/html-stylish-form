@@ -16,7 +16,7 @@
       <form action="">
         <div class="input-container">
           <label for="user-name">Your Name</label>
-          <input type="text" name="" id="user-name" placeholder="Enter your name">
+          <input type="text" name="" id="user-name" placeholder="Enter your name" minlength="3" maxlength="50">
         </div>
 
         <div class="input-container">
@@ -26,27 +26,27 @@
 
         <div class="input-container">
           <label for="user-service">Needed Services</label>
-          <select name="" id="user-service">
-            <option value="" disabled selected hidden>Choose Services</option>
-            <option value="">Deez Nuts</option>
-            <option value="">Deez</option>
-            <option value="">Nuts</option>
+          <select name="" id="user-service" required>
+            <option value="" disabled selected>Choose Services</option>
+            <option value="">Coffee</option>
+            <option value="">Cocaine</option>
+            <option value="">Lossüßer</option>
           </select>
         </div>
 
         <div class="input-container">
           <label for="user-budget">Budget</label>
-          <select name="" id="user-budget">
-            <option value="" disabled selected hidden>Select Budget</option>
-            <option value="">1</option>
-            <option value="">2</option>
-            <option value="">3</option>
+          <select name="" id="user-budget" required>
+            <option value="" disabled selected >Select Budget</option>
+            <option value="">1 €</option>
+            <option value="">18.7 Mio. €</option>
+            <option value="">419.99 €</option>
           </select>
         </div>
 
         <div class="input-container">
           <label for="user-message">Message</label>
-          <textarea name="" id="user-message" placeholder="Your message here..."></textarea>
+          <textarea rows="4" name="" id="user-message" placeholder="Your message here..." minlength="10" maxlength="250"></textarea>
         </div>
 
 
@@ -55,7 +55,9 @@
           <img class="cover" src="./images/arrow-right.svg" alt="">
         </button>
         
-        <!-- <button type="reset">Reset</button> -->
+        <!-- <button type="reset">
+          <p>Reset</p>
+        </button> -->
         
       </form>
     </main>

@@ -7,6 +7,9 @@
     --gradient-col1: #EA3CF7;
     --gradient-col2: #6888E5;
     --gradient-col3: #62D6DC;
+    --color-invalid: rgb(255,68,68);
+    --color-valid: rgb(7, 116, 7);
+
     /* custom font */
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -25,7 +28,14 @@ body {
     min-height: 100vh;
 
     /* TODO: Gradient */
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
+
+    background:
+        linear-gradient(
+            to bottom left,
+            var(--gradient-col1),
+            var(--gradient-col2),
+            var(--gradient-col3));
 }
 
 h1 {
@@ -56,13 +66,13 @@ form {
 
 .input-container {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: .2fr 1fr;
     gap: 10px;
     padding: 20px 0;
 }
 
-.input-container + .input-container {
-    border-top: 1px solid var(--input-border);
+.input-container {
+    border-bottom: 1px solid var(--input-border);
 }
 
 button {
@@ -73,7 +83,7 @@ button {
     gap: 5px;
 
     /* Vertical spacing to next element */
-    margin: 20px 0;
+    margin: 70px 0 20px 0;
 
     /* Button height */
     padding: 10px 0;
@@ -81,13 +91,8 @@ button {
     /* Border settings */
     border-radius:30px;
     border: none;
-    
-    /* Font settings */
-    color: white;
-    font-size: larger;
-    font-family: "Inter";
-    font-weight: 700;
 
+    /* Gradient settings */
     background-image:
         linear-gradient(
             to right,
@@ -95,12 +100,19 @@ button {
             var(--gradient-col2),
             var(--gradient-col3));
 
+
     /* Show click cursor effect - can't use a-tags on buttons */
     cursor: pointer;
 }
 
 button > p {
     justify-self: end;
+
+    /* Font settings */
+    color: white;
+    font-size: x-large;
+    font-family: "Inter";
+    font-weight: 700;
 }
 
 button > img {
@@ -108,8 +120,14 @@ button > img {
 }
 
 button:hover {
+    box-shadow: inset 0 0 20px .5px rgb(255, 255, 255);
+    /* TODO: alles blau bei hover */
     
+
+    background-image: none;
+    background-color: var(--gradient-col2);
 }
+
 
 label {
     font-size: small;
@@ -129,4 +147,9 @@ input::placeholder, textarea::placeholder {
 
 *:is(input, select, textarea):focus {
     outline: 3px solid var(--input-border);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
 }
