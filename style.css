@@ -4,6 +4,9 @@
     --input-border: #D6D6D6;
     --label-color: rgb(85, 82, 82);
     --placeholder-color: rgba(139, 131, 131, 0.432);
+    --gradient-col1: #EA3CF7;
+    --gradient-col2: #6888E5;
+    --gradient-col3: #62D6DC;
     /* custom font */
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -32,6 +35,11 @@ h1 {
     font-weight: 800;
 }
 
+.cover{
+    object-fit: cover;
+    height: 40px;
+}
+
 main {
     background-color: white;
     border-radius: 10px;
@@ -57,13 +65,50 @@ form {
     border-top: 1px solid var(--input-border);
 }
 
+button {
+    /* Grid layout for better arrow with svg */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5px;
 
-.input-container:last-of-type {
-    grid-template-rows: 1fr;
+    /* Vertical spacing to next element */
+    margin: 20px 0;
+
+    /* Button height */
+    padding: 10px 0;
+
+    /* Border settings */
+    border-radius:30px;
+    border: none;
+    
+    /* Font settings */
+    color: white;
+    font-size: larger;
+    font-family: "Inter";
+    font-weight: 700;
+
+    background-image:
+        linear-gradient(
+            to right,
+            var(--gradient-col1),
+            var(--gradient-col2),
+            var(--gradient-col3));
+
+    /* Show click cursor effect - can't use a-tags on buttons */
+    cursor: pointer;
 }
 
-button {
-    margin: 20px 0;
+button > p {
+    justify-self: end;
+}
+
+button > img {
+    justify-self: start;
+}
+
+button:hover {
+    
 }
 
 label {
