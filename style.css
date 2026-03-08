@@ -121,9 +121,6 @@ button > img {
 
 button:hover {
     box-shadow: inset 0 0 20px .5px rgb(255, 255, 255);
-    /* TODO: alles blau bei hover */
-    
-
     background-image: none;
     background-color: var(--gradient-col2);
 }
@@ -139,16 +136,64 @@ input, select, textarea {
     font-size: large;
 }
 
+input, textarea {
+    padding: 10px;
+
+    /* For error animation */
+    --left: 0;
+    left: var(--left);
+    position: relative;
+}
+
+
 /* Placeholder font styles */
 input::placeholder, textarea::placeholder {
     color: var(--placeholder-color);
     font-family: "Inter";
 }
 
+/* Override default outline and add inner shadow on focus*/
 *:is(input, select, textarea):focus {
-    outline: 3px solid var(--input-border);
+    outline: 4px solid var(--gradient-col2);
+    box-shadow: inset 0 0 5px var(--gradient-col2);
 }
 
+
+/* Keyframes for error shake */
+@keyframes error-shake {
+    0% {
+        --left: -25px;
+    }
+    20% {
+        --left: 20px;
+    }
+    40% {
+        --left: -15px;
+    }
+    60% {
+        --left: 10px
+    }
+    80% {
+        --left: -5px;
+    }
+    100% {
+        --left: 0;
+    }
+}
+
+/* Effects for invalid inputs - only applies to the input fields after being invalid and NOT focus -> when clicked away from  the field */
+input:not(:focus):invalid, textarea:not(:focus):invalid {
+    /* Change Border for input fields */
+    border: 2px solid var(--color-invalid);
+
+    /* Change text color */
+    color: var(--color-invalid);
+
+    /* Shake animation */
+    animation: error-shake 400ms;
+}
+
+/* Limit resizeable textarea */
 textarea {
     resize: vertical;
     min-height: 100px;
