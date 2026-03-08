@@ -30,7 +30,7 @@ main {
     background-color: white;
     border-radius: 10px;
 
-    margin: 50px 20%;
+    margin: 50px 25%;
 }
 
 form {
@@ -46,16 +46,18 @@ form {
     padding: 20px 0;
 
     /* Lines between input fields */
-    border-bottom: 1px solid var(--input-border);
+    /* border-bottom: 1px solid var(--input-border); */
 }
 
-/* TODO: Bessere Lösung für die Trennstriche wäre wenn zwei DIVs aufeinander folgen, dass NUR DANN ein "border-top" erscheint */
+.input-container + .input-container {
+    border-top: 1px solid var(--input-border);
+}
 
 /* Remove the lines of the last input container */
-.input-container:last-of-type {
+/* .input-container:last-of-type {
     border-bottom: none;
     grid-template-rows: 1fr;
-}
+} */
 
 input, select, textarea {
     border: none;
@@ -64,9 +66,4 @@ input, select, textarea {
 
 *:is(input, select, textarea):focus {
     outline: 3px solid var(--input-border);
-}
-
-::picker(select) {
-    outline: none;
-    border: none;
 }
