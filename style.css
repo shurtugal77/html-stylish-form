@@ -37,6 +37,7 @@ form {
     display: grid;
     align-items: center;
     margin: 0 10%;
+    padding: 50px 0;
 }
 
 .input-container {
@@ -53,11 +54,14 @@ form {
     border-top: 1px solid var(--input-border);
 }
 
-/* Remove the lines of the last input container */
-/* .input-container:last-of-type {
-    border-bottom: none;
+
+.input-container:last-of-type {
     grid-template-rows: 1fr;
-} */
+}
+
+button {
+    margin: 20px 0;
+}
 
 input, select, textarea {
     border: none;
