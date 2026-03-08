@@ -3,6 +3,7 @@
 :root{
     --input-border: #D6D6D6;
     --label-color: rgb(85, 82, 82);
+    --placeholder-color: rgba(139, 131, 131, 0.432);
     /* custom font */
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -20,6 +21,7 @@
 body {
     min-height: 100vh;
 
+    /* TODO: Gradient */
     background-color: lightcoral;
 }
 
@@ -71,7 +73,13 @@ label {
 
 input, select, textarea {
     border: none;
-    font-size: larger;
+    font-size: large;
+}
+
+/* Placeholder font styles */
+input::placeholder, textarea::placeholder {
+    color: var(--placeholder-color);
+    font-family: "Inter";
 }
 
 *:is(input, select, textarea):focus {
