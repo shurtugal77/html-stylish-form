@@ -8,7 +8,7 @@
     --gradient-col2: #6888E5;
     --gradient-col3: #62D6DC;
     --color-invalid: rgb(255,68,68);
-    --color-valid: rgb(7, 116, 7);
+    --color-valid: rgba(18, 129, 18, 0.932);
 
     /* custom font */
     font-family: "Inter", sans-serif;
@@ -27,15 +27,14 @@
 body {
     min-height: 100vh;
 
-    /* TODO: Gradient */
-    /* background-color: lightcoral; */
-
     background:
         linear-gradient(
             to bottom left,
             var(--gradient-col1),
             var(--gradient-col2),
             var(--gradient-col3));
+    
+    padding: 80px 30%;
 }
 
 h1 {
@@ -54,7 +53,7 @@ main {
     background-color: white;
     border-radius: 10px;
 
-    margin: 50px 25%;
+    /* margin: 100px 25%; */
 }
 
 form {
@@ -133,7 +132,7 @@ label {
 
 input, select, textarea {
     border: none;
-    font-size: large;
+    font-size: x-large;
 }
 
 input, textarea {
@@ -192,6 +191,16 @@ input:not(:focus, :placeholder-shown):invalid, textarea:not(:focus):invalid {
 
     /* Shake animation */
     animation: error-shake 400ms;
+}
+
+input:not(:focus, :placeholder-shown):valid, textarea:not(:focus):valid {
+    /* Change Border for input fields */
+    /* border: .5px solid var(--color-valid); */
+    /* Change text color */
+    color: var(--color-valid);
+    font-weight: 600;
+    /* font-size: larger; */
+
 }
 
 /* Limit resizeable textarea */
